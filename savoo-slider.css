@@ -90,39 +90,29 @@ width: 33px;
 #homepage-countries .country.last {
     margin-right: 22px;
 }
-#leftArrow {
-    float: left;
+.arrow{
     z-index:4;
     width: 0px; 
     height: 0; 
     border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;  
+    border-bottom: 20px solid transparent; 
+    -webkit-transition: 0.1s;
+    -moz-transition: 0.1s;
+    -ms-transition: 0.1s;
+    transition: 0.1s;
+}
+#leftArrow {
+    float: left;
     border-right: 20px solid rgb(219, 219, 219);
-    -webkit-transition: 0.3s;
 }
 #rightArrow {
-    float: right;
-    z-index:4;
-    width: 0; 
-    height: 0; 
-    position: relative;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;  
+    float: right;   
     border-left: 20px solid rgb(228, 228, 228);
-    -webkit-transition: 0.3s;
 }
-#rightArrow:hover{
-    border-left: 40px solid rgb(168, 168, 168);
+.arrow:hover{
     -webkit-transform: scale(1.1);
 }
-#rightArrow:active{
-    -webkit-transform: scale(0.9);
-}
-#leftArrow:hover{
-    border-right:40px solid rgb(168, 168, 168);
-    -webkit-transform: scale(1.1);
-}
-#leftArrow:active{
+.arrow:active{
     -webkit-transform: scale(0.9);
 }
 .intro {

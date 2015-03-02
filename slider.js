@@ -9,10 +9,6 @@ var MobileMenu = {
 var facebook = null;
 var twitter = null;
 var google = null;
-$.get("http://ipinfo.io", function(response) {
-    console.log(response.city, response.country);
-}, "jsonp");
-
 var Slider = {
 	noFrames : 10,
 	position : [],
@@ -131,9 +127,13 @@ var Slider = {
 
 function initiateGeolocationSequence(){
 		// GeoLocation
+		
 	//console.log(geoip_country_code());
-	if(typeof geoip_country_code == 'function'){	
-	var countrycode = geoip_country_code();
+	if(typeof $.get == 'function'){	
+		var countrycode = 0;
+		$.get("http://ipinfo.io", function(response) {
+    		countrycode = response.country;
+		}, "jsonp");
 	switch(countrycode){
 		case "GB":
 			Slider.goToCountry(0);
